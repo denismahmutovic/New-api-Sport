@@ -38,7 +38,7 @@ const Hero = ({ data, setPage }) => {
         );
       })}
       <Pagination
-        defaultActivePage={5}
+        defaultActivePage={1}
         totalPages={100}
         onClick={() => setPage((prev) => prev + 1)}
       />

@@ -10,18 +10,18 @@ const Nav = () => {
   const [data, setData] = useState([]);
   const [title, setTitle] = useState("Sports");
   const [Paganation, setPagination] = useState({});
-  const [page, setPage] = React.useState(2);
+  const [page, setPage] = useState(1);
 
   const getData = (page) => {
     axios
       .get(
-        `${BASE_URL}/?q=${title}&pageSize=3&page=${page}&apiKey=9e2a4c58c6a34d309d07774c318e1282`
+        `${BASE_URL}/?q=${title}&pageSize=3&page=${page}&apiKey=984004e456fc482e8198ad93914cd6c9`
       )
       .then((res) => {
-        setPagination({
-          page: res.data.page,
-          lastPage: res.data.totalPage,
-        });
+        // setPagination({
+        //   page: res.data.page,
+        //   lastPage: res.data.totalPage,
+        // });
         setData(res.data.articles);
       });
   };
